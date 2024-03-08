@@ -31,6 +31,9 @@ const isAuthenticated = (req, res, next) => {
         return res.status(401).json({ error: 'Unauthorized' });
     }
 };
+app.get('/', async (req, res) => {
+    res.json({ genre: "Welcome to chatGPT Blog" });
+});
 
 app.post('/signup', async (req, res) => {
     try {
